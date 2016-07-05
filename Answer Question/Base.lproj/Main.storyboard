@@ -1,14 +1,16 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11134" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11129.15" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11106"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11103.10"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Answer_Question" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -16,11 +18,75 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AsB-aB-6cK">
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
+                                <inset key="titleEdgeInsets" minX="-70" minY="100" maxX="0.0" maxY="-3"/>
+                                <inset key="imageEdgeInsets" minX="20" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                <state key="normal" title="Next" image="next">
+                                    <color key="titleColor" red="1" green="0.58431372550000005" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="nextBtn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="m4p-7k-grI"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aP5-OA-Wca">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="58" id="5fT-M8-UWk"/>
+                                    <constraint firstAttribute="width" constant="343" id="Q0S-Qs-dEL"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
+                                <color key="textColor" red="0.59607843140000005" green="0.79607843140000001" blue="0.29803921570000003" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oOl-cQ-flf">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="58" id="JHH-zP-dMu"/>
+                                    <constraint firstAttribute="width" constant="343" id="vym-ck-NBx"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle2"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MKJ-SI-QYQ">
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="124" id="2aK-F4-iAg"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
+                                <inset key="titleEdgeInsets" minX="-60" minY="100" maxX="0.0" maxY="-4"/>
+                                <inset key="imageEdgeInsets" minX="22" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                <state key="normal" title="Answer" image="see">
+                                    <color key="titleColor" red="1" green="0.1764705882" blue="0.33333333329999998" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="answerBtn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Oxd-OM-FIc"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="oOl-cQ-flf" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="2nw-QC-T5g"/>
+                            <constraint firstItem="MKJ-SI-QYQ" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="48" id="3sG-Wj-eBv"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="AsB-aB-6cK" secondAttribute="trailing" constant="48" id="9ki-UW-f4R"/>
+                            <constraint firstItem="aP5-OA-Wca" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="124" id="RzR-2r-fU7"/>
+                            <constraint firstItem="MKJ-SI-QYQ" firstAttribute="top" secondItem="oOl-cQ-flf" secondAttribute="bottom" constant="73" id="TK5-5V-giG"/>
+                            <constraint firstItem="oOl-cQ-flf" firstAttribute="top" secondItem="aP5-OA-Wca" secondAttribute="bottom" constant="27" id="WMP-oS-jEh"/>
+                            <constraint firstItem="aP5-OA-Wca" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="X7o-uo-yHR"/>
+                            <constraint firstItem="AsB-aB-6cK" firstAttribute="top" secondItem="oOl-cQ-flf" secondAttribute="bottom" constant="73" id="xmV-y0-LUa"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="AnswerLbl" destination="oOl-cQ-flf" id="7Sb-hs-mP7"/>
+                        <outlet property="QuestionLbl" destination="aP5-OA-Wca" id="rqa-ER-7zB"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="305.625" y="43.309859154929576"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="next" width="64" height="64"/>
+        <image name="see" width="64" height="64"/>
+    </resources>
 </document>
